@@ -13,6 +13,18 @@ class SayHelloController < ApplicationController
     render :add
   end
 
+  def formtest
+
+
+  end
+  def dosomething
+
+
+    redirect_to "/sayhello/to/" + params["name"]
+  end
+
+
+
 
   
 end

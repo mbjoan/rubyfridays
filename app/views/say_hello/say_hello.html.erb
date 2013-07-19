@@ -10,12 +10,6 @@
 
 <!-- i can even choose what to show based on the input! -->
 
-<h2>
-	Hello <%= @name %>.
-	<% if @name == "akash" %>
-	you wonderful, amazing person
-	<% end %>
-</h2>
 
 
 <!-- I don't have to keep all my code in 1 place, I can put stuff into a 
@@ -27,11 +21,12 @@
 
 	<!-- Partials can also be shared and referenced across multiple folders -->
 <%= render :partial => "shared/shared_partial" %>
+<%= render :partial => "shared/shared_partial" %>
 
 	<!-- This won't show as I don't have the equals sign -->
-<% render :partial => "shared/shared_partial" %>
+<%= render :partial => "someother_partial" %>
 
 	<!-- and finally I can send information across to a partial like so -->
-<%= render :partial => "partial_with_variables", :locals => {:a => "something"} %>
+<%= render :partial => "partial_with_variables", :locals => {:a => "something else"} %>
 
 
